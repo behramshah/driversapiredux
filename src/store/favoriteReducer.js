@@ -4,7 +4,7 @@ export const favoriteReducer = (state = [], action) => {
         case "ADD_FAVORITE":
             return [...state, action.payload]
         case "REMOVE_FAVORITE":
-            return [state.filter(elem => elem !== action.payload)]
+            return (state.filter(elem => elem !== action.payload))
         default:
             return state;
     }
